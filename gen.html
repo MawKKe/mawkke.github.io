@@ -35,8 +35,11 @@ ul {
 	</ul>
 
 <script>
+	var counter = 1;
+
 	var zero = function(){
 		document.getElementById("numerot").innerHTML = "";
+		counter = 1;
 	}
 	var rnd = function(n){
 		var s = "";
@@ -55,8 +58,9 @@ ul {
 		console.log(r);
 		var ul = document.getElementById("numerot");
 		var li = document.createElement("li");
-		li.appendChild(document.createTextNode(r));
+		li.appendChild(document.createTextNode(String(counter) + ": " + r));
 		ul.appendChild(li);
+		counter++;
 	};
 </script>
 </body>
