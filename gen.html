@@ -11,7 +11,10 @@ body{
 	font-family: monospace;
 	font-size: 45px;
 }
-input, button{
+select {
+	width: 40px;
+}
+input, button, select{
 	font-size: 20px;
 }
 span {
@@ -28,7 +31,14 @@ ul {
 }
 </style>
 <body>
-	<input type="text" name="n_digits" id="n_digits" value="4">
+	<select id="n_digits">
+		<option value="4" option="selected">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+	</select>
 	<button onclick="gen()">Paina nappulaa</button>
 	<button onclick="zero()">Nollaa</button>
 	<ul id="numerot">
