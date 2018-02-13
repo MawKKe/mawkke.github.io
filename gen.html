@@ -29,18 +29,31 @@ li {
 ul {
 	list-style: none;
 }
+#btns{
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+#numerot {
+	padding-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 </style>
 <body>
-	<select id="n_digits">
-		<option value="4" option="selected">4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-		<option value="7">7</option>
-		<option value="8">8</option>
-		<option value="9">9</option>
-	</select>
-	<button onclick="gen()">Paina nappulaa</button>
-	<button onclick="zero()">Nollaa</button>
+	<div id="btns">
+		<select id="n_digits">
+			<option value="4" option="selected">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+		</select>
+		<button onclick="gen()">Paina nappulaa</button>
+		<button onclick="zero()">Nollaa</button>
+	</div>
 	<ul id="numerot">
 	</ul>
 
