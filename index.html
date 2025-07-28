@@ -19,14 +19,14 @@
   <span>^C^Casdkjasflkjdsflksdfsf</span>
   <span id="cursor">█</span>
   <p class="lol">OMG 2 SPOOKY</p>
-
   <script type="module">
-    import { visibilityToggler } from './static/main.js';
-
-    setInterval(
-      visibilityToggler(document.getElementById("cursor")),
-      500
-    );
+    import { cycler } from './static/main.js';
+    const cursor = document.getElementById("cursor");
+    const gen = cycler([
+      () => cursor.style.visibility = "hidden",
+      () => cursor.style.visibility = "visible",
+    ]);
+    setInterval(() => gen.next().value(), 500);
   </script>
 </body>
 

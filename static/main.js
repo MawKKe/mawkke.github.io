@@ -6,19 +6,4 @@ function* cycler(elements) {
     }
 }
 
-function setVisible(element, is_visible) {
-    const new_state = ["hidden", "visible"][Number(is_visible)];
-    element.style.visibility = new_state;
-}
-
-function visibilityToggler(element) {
-    var cycle = cycler([
-        () => setVisible(element, false),
-        () => setVisible(element, true),
-    ]);
-    return () => {
-        cycle.next().value();
-    }
-}
-
-export { visibilityToggler };
+export { cycler };
