@@ -1,18 +1,10 @@
+<!doctype html>
 <html>
 	<head>
 		<meta charset="utf8">
-		<title>Welcome to MawKKe's github pages!</title>
+		<title>Welcome to MawKKe's Github Pages!</title>
+    <link rel="stylesheet" href="static/style.css" />
 	</head>
-<style>
-body{
-	background: black;
-	font-family: monospace;
-	font-size: 15px;
-}
-span {
-	color: lime;
-}
-</style>
 <body>
 <span style="font-weight: bold">root@localhost:~#</span><span> rm -rf --no-preserve-root /</span>
 <br>
@@ -25,12 +17,13 @@ span {
 <span id="cursor">█</span>
 <p class="lol">OMG 2 SPOOKY</p>
 
-<script>
-	var timeo = 500;
-	var sett = function(val){ document.getElementById("cursor").style.visibility = val; };
-	var a = function(){ sett("hidden"); setTimeout(b, timeo);};
-	var b = function(){ sett("visible"); setTimeout(a, timeo); };
-	a();
+<script type="module">
+    import { visibilityToggler } from './static/main.js';
+
+    setInterval(
+        visibilityToggler(document.getElementById("cursor")),
+        500
+    );
 </script>
 </body>
 </html>
